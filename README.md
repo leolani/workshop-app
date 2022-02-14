@@ -14,8 +14,8 @@ To start from this template:
   ```
   or to add it as git submodule
   ```
-  git submodule add --name <MODULE_NAME> https://github.com/leolani/cltl-template.git
-  git mv cltl-template <MODULE_NAME> 
+  git submodule add --name <MODULE_NAME> https://github.com/leolani/cltl-template.git <MODULE_NAME>
+  git submodule set-url <MODULE_NAME> <REMOTE_URL>
   ```
 * Reomve the old remote:
   ```
