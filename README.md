@@ -29,8 +29,14 @@ To start from this template:
 
 * Add dependencies on libraries to `setup.py`
 * Add dependencies on other components to the makefile.
-* Rename the python module from `template` to the desired MODLE_NAME.
-* Add the component as dependency to the app makefile
+* Rename the python module from `template` to the desired module name in `src/cltl`, `src/cltl_service` and the `setup.py`.
+* Add the component as dependency to the parent makefile and the makefile of the app and other components that depend on it.
+* Ensure the `util/` submodule is checked out and run `make build` from the application parent. If `util/` is not checked
+  out, run
+
+      git submodule update --init
+
+  in the component's repository.
 
 ## For a typical Python component
 
