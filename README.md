@@ -39,12 +39,17 @@ To start from this template:
 * Ensure the `util/` submodule is checked out in the new component and run `make build` **twice** from the application
   parent. If `util/` is not checked out, run
 
-      git submodule update --init
+       git submodule update --init
 
   in the component's repository. Once the build is done, check if a virtual environment is created in the component and
   a package for the component is published to `cltl-requirements/leolani`. If this is not the case, try to run build the
   application from scratch by running `make clean` and `make build` from the parent repository. If it still fails,
   examine the output of *make* for log messages about the component or errors.
+* Commit the changes to all modified components and the parent makefile. Commit the parent and run
+       
+       git push --recurse-submodules=on-demand
+  
+  from the parent.
 * Customize the component and add it to the application as described below.
 
 ## Create a Python component
