@@ -11,7 +11,7 @@ To start from this template:
 * Clone the repository
     * To add it as git submodule run
 
-          git submodule add -b --name <MODULE_NAME> https://github.com/leolani/cltl-template.git <MODULE_NAME>
+          git submodule add -b main --name <MODULE_NAME> https://github.com/leolani/cltl-template.git <MODULE_NAME>
           git submodule set-url <MODULE_NAME> <REMOTE_URL>
 
     * or clone this repository
