@@ -16,12 +16,12 @@ setup(
     data_files=[('VERSION', ['VERSION'])],
     url="https://github.com/leolani/cltl-template",
     license='MIT License',
-    author='CLTL',
-    author_email='t.baier@vu.nl',
+    author='',
+    author_email='',
     description='Template component for Leolani',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    python_requires='>=3.8',
+    python_requires='>=3.9',
     install_requires=['cltl.combot'],
     extras_require={
         "impl": [
@@ -29,6 +29,7 @@ setup(
         ],
         "service": [
             "emissor",
-            "flask"
+            "flask",
+            "kombu"
         ]}
 )

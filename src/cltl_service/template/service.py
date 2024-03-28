@@ -70,12 +70,12 @@ class TemplateService:
         if self._app:
             return self._app
 
-        self._app = Flask("audio_storage")
+        self._app = Flask("Template app")
         self._app.json_encoder = NumpyJSONEncoder
 
-        @self._app.route(f"/template/<paramter>", methods=['GET'])
+        @self._app.route(f"/query/<paramter>", methods=['GET'])
         def store_audio(parameter: str):
-            return Response(status=200)
+            return self._processor.respond(parameter)
 
         @self._app.after_request
         def set_cache_control(response):
@@ -91,8 +91,8 @@ class TemplateService:
         response = self._processor.respond(event.payload.signal.text)
 
         if response:
-            eliza_event = self._create_payload(response)
-            self._event_bus.publish(self._output_topic, Event.for_payload(eliza_event))
+            dummy_event = self._create_payload(response)
+            self._event_bus.publish(self._output_topic, Event.for_payload(dummy_event))
 
     def _create_payload(self, response):
         signal = TextSignal.for_scenario(None, timestamp_now(), timestamp_now(), None, response)
