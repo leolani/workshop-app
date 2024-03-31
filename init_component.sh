@@ -18,7 +18,7 @@ usage() {
   echo ""
   echo "Example:"
   echo ""
-  echo "$0 --name mycomponent --remote 'https://github.com/me/mycomponent' --namespace myproject"
+  echo "$0 --name mycomponent --remote 'https://github.com/me/mycomponent.git' --namespace myproject"
   echo ""
   exit 1
 }

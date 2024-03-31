@@ -1,11 +1,26 @@
 # cltl-template
 
-This repo is a template for the other services. Each service has its own repo and a Dockerfile. Their structure will
-inherit from this repo.
+This repo is a template for services and applications in the Leolani platform.
+
+## Quick Start
+
+To quickly setup the component:
+
+- create an empty repository for the component on GitHub.
+- run the `./init_component.sh` script specifying the name, remote URL and eventually the namespace for the component:
+
+       ./init_component.sh --name mycomponent --remote 'https://github.com/me/mycomponent.git' --namespace myproject
+
+- Add dependencies needed for your commponent in the setup.py (for commponents) or requirements.txt (for applications)
+and add README and LICENCE information.
+- If the template is used for an application repository, set up a Python application in `py-app/app.py`. If no
+  application is wanted you can remove the `py-app/` folder.
+  
 
 ## Start from this template
 
-To start from this template:
+This section contains the detailed steps to take from this template. Most of them are covered by the script in the
+[Qick Start](#quick-start) section:
 
 * Create a new empty repository on github with name <MODULE_NAME>.
 * Clone the repository
