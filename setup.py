@@ -9,12 +9,12 @@ with open("VERSION", "r") as fh:
 
 
 setup(
-    name='cltl.template',
+    name='workshop.workshop-app',
     version=version,
     package_dir={'': 'src'},
-    packages=find_namespace_packages(include=['cltl.*', 'cltl_service.*'], where='src'),
+    packages=find_namespace_packages(include=['workshop.*', 'workshop_service.*'], where='src'),
     data_files=[('VERSION', ['VERSION'])],
-    url="https://github.com/leolani/cltl-template",
+    url="https://github.com/numblr/workshop-app",
     license='MIT License',
     author='',
     author_email='',
