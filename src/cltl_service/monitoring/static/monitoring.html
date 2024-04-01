@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no" />
+    <title>Pepper Web View</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<img id="image" src="../image.jpg?0">
+
+<script>
+
+$(function() {
+    let active = true;
+    $(window).focus(function() {
+         active = true;
+    });
+
+    $(window).blur(function() {
+        active = false;
+    });
+
+    let $image = $("#image");
+    var load_data = function() {
+        if (active) {
+            $image.attr("src", "../image.jpg?" + new Date().getTime());
+        }
+    };
+
+    setInterval(load_data, 2500);
+});
+
+</script>
+</body>
+</html>

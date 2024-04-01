@@ -12,7 +12,7 @@ setup(
     name='workshop.workshop-app',
     version=version,
     package_dir={'': 'src'},
-    packages=find_namespace_packages(include=['workshop.*', 'workshop_service.*'], where='src'),
+    packages=find_namespace_packages(include=['cltl.*', 'cltl_service.*', 'workshop.*', 'workshop_service.*'], where='src'),
     data_files=[('VERSION', ['VERSION'])],
     url="https://github.com/numblr/workshop-app",
     license='MIT License',
@@ -29,6 +29,7 @@ setup(
         ],
         "service": [
             "emissor",
+            "pillow",
             "flask",
             "kombu"
         ]}
